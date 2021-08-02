@@ -1,0 +1,84 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>Todo</title>
+    <style>
+        .navbar-brand img{
+            height: 25px;
+            width: 35px;
+            border-radius: 7px;
+           
+        }
+        
+        body{
+            background: rgb(241, 241, 243);
+            background: linear-gradient(90deg, rgb(199, 198, 204) 0%, rgba(244, 215, 245, 0.902) 27%, rgb(144, 208, 221) 100%);
+        }
+        .sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 0; /* Stay on top */
+  top: 50; /* Stay at the top */
+  left: 0;
+  background-color: rgb(255, 243, 243); /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #050404;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #3b3b3b;
+}
+
+/* Style page content */
+
+    </style>
+</head>
+<body>
+<div class="sidenav">
+   
+    <a href="#">Tasks</a>
+    <a href="#">Goals</a>
+    <a href="#">Add List + </a>
+    <br><br>
+    <a href="#">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+    
+</div>
+
+<!-- Page content -->
+<div class="main">
+    <nav class="navbar fixed-top navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'task2fpractice-management.png' %}"> Todo</a>
+        </div>
+    </nav>
+</div>
+
+
+    
+    
+
+   
+</body>
+</html>
