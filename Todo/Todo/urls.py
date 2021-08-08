@@ -25,4 +25,5 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('admin/', admin.site.urls),
     path('addtask/', views.add, name='add'),
+    path('madone/<id>', views.madone,name='madone'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

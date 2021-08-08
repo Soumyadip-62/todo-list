@@ -24,3 +24,8 @@ def add(request):
         return redirect('/addtask')
     else:
         return render(request, 'addtask.html')
+
+def madone(request, id):
+        tasks = Tasks.objects.get(pk=id)
+        tasks.delete()
+        return redirect('/')

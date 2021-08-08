@@ -8,7 +8,7 @@
 <table class="table table-hover">
     <thead>
         <tr>
-           
+            <th scope="col">Task Id</th>
             <th scope="col">Task Title</th>
             <th scope="col">Description</th>
 
@@ -20,10 +20,10 @@
     <tbody>
         {% for i in tdl %}
         <tr>
-            
+            <td>{{forloop.counter}}</td>
             <td>{{i.tasks_name}}</td>
             <td>{{i.tasks_details}}</td>
-
+            <td><a href="{% url 'madone' i.id %}"><button class="btn btn-outline-success">Mark as done</button></a></td>
         </tr>
         {% endfor %}
         {% else %}
