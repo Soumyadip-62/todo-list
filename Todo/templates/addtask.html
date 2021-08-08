@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block body%}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+        {% endfor %}
+</ul>
+{% endif %}
+<div class="container my-3">
+    <h1 class="text-center">Add a task</h1>
+</div>
+<form  method="POST">
+    {% csrf_token %}
+    <div class="mb-1">
+        <label for="task" class="form-label">Task</label>
+        <input type="text" class="form-control" id="title" name="title">
+
+    </div>
+    <div class="mb-3">
+        <label for="desc" class="form-label">Details</label>
+        <input type="text" class="form-control" id="desc" name="desc">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock body%}

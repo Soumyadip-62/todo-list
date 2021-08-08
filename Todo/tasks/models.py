@@ -4,7 +4,7 @@ from django.db import models
 class Tasks(models.Model):
     tasks_name = models.CharField(max_length=30)
     tasks_details = models.CharField(max_length=90)
-    task_date = models.DateTimeField(auto_now=False, auto_now_add=False)
+    task_date = models.DateTimeField(auto_now=True)
     def __str__(self):
         return self.tasks_name
     
